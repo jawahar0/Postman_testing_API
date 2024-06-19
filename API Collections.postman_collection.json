@@ -1,0 +1,1841 @@
+{
+	"info": {
+		"_postman_id": "7d5c20a9-e108-4720-81a5-b30b1739bc07",
+		"name": "API Collections",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31637409"
+	},
+	"item": [
+		{
+			"name": "Basic Concept of Authorization",
+			"item": [
+				{
+					"name": "Parameters Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{GoogleURL}}/search?q=trichy&oq=trichy&gs_lcrp=EgZjaHJvbWUqEAgAEAAYgwEY4wIYsQMYgAQyEAgAEAAYgwEY4wIYsQMYgAQyDQgBEC4YgwEYsQMYgAQyDQgCEAAYgwEYsQMYgAQyCggDEAAYsQMYgAQyCggEEAAYsQMYgAQyCggFEAAYsQMYgAQyCggGEAAYsQMYgAQyEAgHEAAYgwEYsQMYgAQYigUyEAgIEAAYgwEYsQMYgAQYigUyCggJEAAYsQMYgATSAQg2MzQ5ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8",
+							"host": [
+								"{{GoogleURL}}"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "trichy"
+								},
+								{
+									"key": "rlz",
+									"value": "1C1CHBF_enIN995IN995",
+									"disabled": true
+								},
+								{
+									"key": "oq",
+									"value": "trichy"
+								},
+								{
+									"key": "gs_lcrp",
+									"value": "EgZjaHJvbWUqEAgAEAAYgwEY4wIYsQMYgAQyEAgAEAAYgwEY4wIYsQMYgAQyDQgBEC4YgwEYsQMYgAQyDQgCEAAYgwEYsQMYgAQyCggDEAAYsQMYgAQyCggEEAAYsQMYgAQyCggFEAAYsQMYgAQyCggGEAAYsQMYgAQyEAgHEAAYgwEYsQMYgAQYigUyEAgIEAAYgwEYsQMYgAQYigUyCggJEAAYsQMYgATSAQg2MzQ5ajBqN6gCALACAA"
+								},
+								{
+									"key": "sourceid",
+									"value": "chrome"
+								},
+								{
+									"key": "ie",
+									"value": "UTF-8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Copy parameters to another request eg: trichy to salem Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{GoogleURL}}/search?q=salem&rlz=1C1CHBF_enIN995IN995&oq=trichy&gs_lcrp=EgZjaHJvbWUqEAgAEAAYgwEY4wIYsQMYgAQyEAgAEAAYgwEY4wIYsQMYgAQyDQgBEC4YgwEYsQMYgAQyDQgCEAAYgwEYsQMYgAQyCggDEAAYsQMYgAQyCggEEAAYsQMYgAQyCggFEAAYsQMYgAQyCggGEAAYsQMYgAQyEAgHEAAYgwEYsQMYgAQYigUyEAgIEAAYgwEYsQMYgAQYigUyCggJEAAYsQMYgATSAQg2MzQ5ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8",
+							"host": [
+								"{{GoogleURL}}"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "salem"
+								},
+								{
+									"key": "rlz",
+									"value": "1C1CHBF_enIN995IN995"
+								},
+								{
+									"key": "oq",
+									"value": "trichy"
+								},
+								{
+									"key": "gs_lcrp",
+									"value": "EgZjaHJvbWUqEAgAEAAYgwEY4wIYsQMYgAQyEAgAEAAYgwEY4wIYsQMYgAQyDQgBEC4YgwEYsQMYgAQyDQgCEAAYgwEYsQMYgAQyCggDEAAYsQMYgAQyCggEEAAYsQMYgAQyCggFEAAYsQMYgAQyCggGEAAYsQMYgAQyEAgHEAAYgwEYsQMYgAQYigUyEAgIEAAYgwEYsQMYgAQYigUyCggJEAAYsQMYgATSAQg2MzQ5ajBqN6gCALACAA"
+								},
+								{
+									"key": "sourceid",
+									"value": "chrome"
+								},
+								{
+									"key": "ie",
+									"value": "UTF-8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "API Key authorization Copy",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "0572c7dd2b4282056eada755e4b790ab",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "query",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "appid",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.openweathermap.org/data/2.5/weather?q=s&appid=0572c7dd2b4282056eada755e4b790ab",
+							"protocol": "https",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"weather"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "s"
+								},
+								{
+									"key": "appid",
+									"value": "0572c7dd2b4282056eada755e4b790ab"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Basic-Auth Concept Copy",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "password",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "postman",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://postman-echo.com/basic-auth",
+							"protocol": "https",
+							"host": [
+								"postman-echo",
+								"com"
+							],
+							"path": [
+								"basic-auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bearer Token or Access token Concept Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "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",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.github.com/user/repos",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"user",
+								"repos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Digest Auth Copy",
+					"request": {
+						"auth": {
+							"type": "digest",
+							"digest": [
+								{
+									"key": "realm",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "qop",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "nonce",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "disableRetryRequest",
+									"value": false,
+									"type": "boolean"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "postman",
+									"type": "string"
+								},
+								{
+									"key": "algorithm",
+									"value": "MD5",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://postman-echo.com/digest-auth",
+							"protocol": "https",
+							"host": [
+								"postman-echo",
+								"com"
+							],
+							"path": [
+								"digest-auth"
+							]
+						},
+						"description": "This digest auth is used authoticated the protected resources from the server and gives the challenge response like eg:realm,nonce,qop and algorithm"
+					},
+					"response": []
+				},
+				{
+					"name": "oAuth2.0 Copy",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "authUrl",
+									"value": "{{authURL}}",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "https://mail.google.com/",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://accounts.google.com/o/oauth2/token",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gmail.googleapis.com/gmail/v1/users/jawahar181099@gmail.com/messages/18d1d5045b23efbe",
+							"protocol": "https",
+							"host": [
+								"gmail",
+								"googleapis",
+								"com"
+							],
+							"path": [
+								"gmail",
+								"v1",
+								"users",
+								"jawahar181099@gmail.com",
+								"messages",
+								"18d1d5045b23efbe"
+							]
+						},
+						"description": "Example:\n\nService 1: when print the photos in walment\n\nService 2:But the photos are google account or drive when print the photos without my login authentication how ?\n\nService 1: given the When i given the url like some url you login the credential then google account given the response that response will helpfull to download the photos\n\nService 2: Need the lot access request and authetication request lam kekuran solli namakku display pannum"
+					},
+					"response": []
+				},
+				{
+					"name": "GlobalVariable=API Key Auth Example Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{GoogleURL}}/search?q=salem",
+							"host": [
+								"{{GoogleURL}}"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "salem"
+								}
+							]
+						},
+						"description": "\\*Global variables **enable you to access data between collections, requests, test scripts, and environments**.\n\n\\*Global variables are available throughout a workspace.\n\n\\*Since global variables have the broadest scope available in Postman, they're well-suited for testing and prototyping."
+					},
+					"response": []
+				},
+				{
+					"name": "EnvironmentVariable Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"{{email}}\",\r\n    \"password\": \"{{password}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}",
+							"host": [
+								"{{URL}}"
+							]
+						},
+						"description": "StartFragment\n\nA collection of key-value pairs is called an environment. Each name of the variable represents its keys. And referencing the name of the variable allows you to access its value.\n\nIt is a set of variables that differentiate among the requests. Such as, we can have an environment for testing, one for development and another for production. We can change the value of the variables to pass the data between requests and tests.\n\nEndFragment"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Basic Employee API",
+			"item": [
+				{
+					"name": "GET all employees",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/employees/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"employees",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET an employees",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/employees/XDG2kqX",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"employees",
+								"XDG2kqX"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crete the Resources in server side",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"employees\": [\r\n    {\r\n      \"CompanyName\":\"TCS\",\r\n      \"FirstName\": \"Jawahar\",\r\n      \"LastName\":\"s\",\r\n      \"EmailId\":\"jawahar099@gmail.com\",\r\n      \"AlternateEmailId\":\"jawahar99@gmail.com\",\r\n      \"PhoneNumber\":\"9778876889\",\r\n      \"AlternatePhoneNumber\":\"8796867868\",\r\n      \"Address\":\"Chennai\",\r\n      \"Country\":\"India\",\r\n      \"State\":\"Tamilnadu\",\r\n      \"Avatar\":\"https://reqres.in/img/faces/7-image.jpeg\",\r\n      \"salary\": \"9000\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/employees/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"employees",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete the resources from the server",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"employees\": [\r\n    {\r\n      \"name\": \"Jawahar\",\r\n      \"salary\": \"9000\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/employees/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"employees",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update an employee",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"employees\": [\r\n    {\r\n      \"CompanyName\":\"TCS\",\r\n      \"FirstName\": \"Rajasekaran\",\r\n      \"LastName\":\"s\",\r\n      \"EmailId\":\"raja@gmail.com\",\r\n      \"AlternateEmailId\":\"jawahar99@gmail.com\",\r\n      \"PhoneNumber\":\"9778876889\",\r\n      \"AlternatePhoneNumber\":\"8796867868\",\r\n      \"Address\":\"Chennai\",\r\n      \"Country\":\"India\",\r\n      \"State\":\"Tamilnadu\",\r\n      \"Avatar\":\"https://reqres.in/img/faces/7-image.jpeg\",\r\n      \"salary\": \"9000\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/employees/QxGeGyc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"employees",
+								"QxGeGyc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Collection Variables",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"console.log(pm.collectionVariables.get(\"email\"))\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"{{email}}\",\r\n    \"password\": \"{{password}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reqres.in/api/registerProd",
+							"protocol": "https",
+							"host": [
+								"reqres",
+								"in"
+							],
+							"path": [
+								"api",
+								"registerProd"
+							]
+						},
+						"description": "Collection variables: **These variables are accessible only inside a certain collection**. They are available across all the requests within a collection. Also, they don't change based on the selected environment."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Integration with jerkins",
+			"item": []
+		},
+		{
+			"name": "T-23 Basic Testscript",
+			"item": [
+				{
+					"name": "Data From JSON File",
+					"item": [
+						{
+							"name": "Sending data form json file",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"{{email}}\",\r\n    \"password\": \"{{password}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://reqres.in/api/register",
+									"protocol": "https",
+									"host": [
+										"reqres",
+										"in"
+									],
+									"path": [
+										"api",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Data Driven in JSON File Uploaad",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test('Verify the status code is 201', function () {",
+											"    pm.response.to.have.status(201);",
+											"})",
+											"",
+											"pm.test(\"Verify the response is Created\",()=> {",
+											"    pm.expect(pm.response.status).to.equal('Created');",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"First_Name\":\"{{First_Name}}\",\r\n    \"Last_Name\":\"{{Last_Name}}\",\r\n    \"EmailID\":\"{{EmailID}}\",\r\n    \"Salary\":\"{{Salary}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/employees/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"employees",
+										""
+									]
+								},
+								"description": "StartFragment\n\nData-driven testing is a testing methodology where the test case data is separated from the test case logic. You create a series of test scripts that see the same test steps performed repeatedly in the same order, but with a variation of data. In data-driven testing, a data source, like a spreadsheet or other table, is used for the input values and typically the testing environment is not hard-coded.\n\nAs an extension of your automated test cases, in data-driven testing, data external to your functional tests is loaded and used to extend these cases.\n\n  \nEndFragment"
+							},
+							"response": []
+						},
+						{
+							"name": "Data Driven in JSON File Upload",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test('Verify the status code is 201', function () {",
+											"    pm.response.to.have.status(201);",
+											"})",
+											"",
+											"pm.test(\"Verify the response is Created\",()=> {",
+											"    pm.expect(pm.response.status).to.equal('Created');",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"First_Name\":\"{{First_Name}}\",\r\n    \"Last_Name\":\"{{Last_Name}}\",\r\n    \"EmailID\":\"{{EmailID}}\",\r\n    \"Salary\":\"{{Salary}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/employees/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"employees",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Data From CSV File",
+					"item": [
+						{
+							"name": "Send data from CSV File Upload",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test('Verify the status code is 201', function () {",
+											"    pm.response.to.have.status(201);",
+											"})",
+											"",
+											"pm.test(\"Verify the response is Created\",()=> {",
+											"    pm.expect(pm.response.status).to.equal('Created');",
+											"})",
+											"",
+											"pm.test(\"Response time is below 30ms\",()=> {",
+											"pm.expect(pm.response.responseTime).to.below(10) ;",
+											"})",
+											"",
+											"pm.test(\"Body contains Username\", ()=> {",
+											"    pm.expect(pm.response.text()).to.include(data.Username);",
+											"    console.log(data[\"Username\"]) //1st Old style code",
+											"})",
+											"pm.test(\"Body contains Role\", function () {",
+											"    pm.expect(pm.response.text()).to.include(pm.iterationData.get(\"Role\"))// 2nd new style code",
+											"    console.log(pm.iterationData.get(\"Role\"))",
+											"})",
+											"pm.test(\"Body contains age\", function () {",
+											"    pm.expect(pm.response.text()).to.include(pm.iterationData.get(\"age\"))// 2nd new style code",
+											"    console.log(pm.iterationData.get(\"age\"))",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Username\":\"{{Username}}\",\r\n    \"Role\":\"{{Role}}\",\r\n    \"age\":\"{{age}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/employees/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"employees",
+										""
+									]
+								},
+								"description": "StartFragment\n\nData-driven testing is a testing methodology where the test case data is separated from the test case logic. You create a series of test scripts that see the same test steps performed repeatedly in the same order, but with a variation of data. In data-driven testing, a data source, like a spreadsheet or other table, is used for the input values and typically the testing environment is not hard-coded.\n\nAs an extension of your automated test cases, in data-driven testing, data external to your functional tests is loaded and used to extend these cases.\n\n**CSV** stands for Comma Separated Value. This file is simply a text only file. A CSV file can't save formatting, formulas, or anything other than text and numbers. It saves the data in a simple table format, one that can be imported into almost any program.\n\nEndFragment"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Tutorial-21 ScriptExecutionOrder",
+					"item": [
+						{
+							"name": "Google",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"console.log(\"After Google\")",
+											"",
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"console.log(\"Before Google\")",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://www.google.co.in",
+									"protocol": "https",
+									"host": [
+										"www",
+										"google",
+										"co",
+										"in"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Bing",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"console.log(\"After Bing\")",
+											"",
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"console.log(\"Before Bing\")"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://www.bing.com",
+									"protocol": "https",
+									"host": [
+										"www",
+										"bing",
+										"com"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Yahoo",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"console.log(\"After Yahoo\")",
+											"",
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"console.log(\"Before Yahoo\")"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://www.yahoo.com",
+									"protocol": "https",
+									"host": [
+										"www",
+										"yahoo",
+										"com"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "NewEmployeeCreation",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"pm.sendRequest(\"http://localhost:3000/employees\", function (err, response) {\r",
+											"    if(response.code==201){\r",
+											"        console.error(\"Health check failed server is down\")\r",
+											"        throw new error(\"server is down\")\r",
+											"    }\r",
+											"    console.log(response.json());\r",
+											"});\r",
+											"pm.globals.unset(\"GoogleURL\");\r",
+											"\r",
+											"console.log(\"Before request\")"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"console.log(\"After request\")"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"FirstName\": \"Jawahar\",\r\n    \"LastName\": \"s\",\r\n    \"EmailId\": \"jawahar099@gmail.com\",\r\n    \"salary\": \"9000\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/employees",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"employees"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "StartFragment\n\nIn Postman, the script execution order for a single request looks like this:\n\n- A pre-request script associated with a request will execute before the request is sent\n- A test script associated with a request will execute after the request is sent\n    \n\n<img src=\"https://content.pstmn.io/b760eead-97ce-41e4-8e0d-8f50792d6ee6/cmVxLXJlc3AuanBn\">\n\n**A pre-request script associated with a collection will run prior to every request in the collection**. A pre-request script associated with a folder will run prior to every direct child request in the folder. A test script associated with a collection will run after every request in the collection.\n\n<img src=\"https://content.pstmn.io/06a36840-8bca-49c7-afd9-9fe6c1cd6912/aW1hZ2UucG5n\" alt=\"Pre%20request%20and%20testscript%20workflow\" width=\"1286\" height=\"456\">\n\n- A pre-request script associated with a folder will run prior to every direct child request in the folder.\n    \n- A test script associated with a collection will run after every request in the collection.\n    \n- A test script associated with a folder will run after every direct child request in the folder.\n    \n\nEndFragment",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"console.log(\"Folder level pre request\")"
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"console.log(\"Folder level (test) request script\")"
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "Tutorial-22 Request Chaining",
+					"item": [
+						{
+							"name": "AddNewUser",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonResponse=JSON.parse(responseBody)\r",
+											"var id=jsonResponse.id //json path\r",
+											"console.log(id)\r",
+											"\r",
+											"var jsonResponse2=pm.response.json()\r",
+											"var id2=jsonResponse2.id\r",
+											"console.log(id2)\r",
+											"\r",
+											"pm.collectionVariables.set(\"EmployeeID\", id2);\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"FirstName\": \"tommy\",\r\n    \"LastName\": \"s\",\r\n    \"EmailId\": \"tommy@gmail.com\",\r\n    \"salary\": \"10000\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/employees",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"employees"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAnOldUser",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/employees/{{EmployeeID}}",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"employees",
+										"{{EmployeeID}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteOldUser",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/employees/{{EmployeeID}}",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"employees",
+										"{{EmployeeID}}"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "<img src=\"https://files.readme.io/27bb76e-ChainingRequest.png\">\n\nStartFragment\n\nChaining API requests is a technique where you programmatically make multiple API requests to perform a particular function, with each request feeding subsequent requests.\n\nUsing a REST API client like [Postman](https://www.postman.com/), you can create a workflow that makes a request to one of the WhiteHat Dynamic API operations, then uses the information contained in the response to make a request to a different operation. For example, using the WhiteHat Dynamic APIs, you can create a workflow that contains API requests to:\n\n1. Check if a name is available for a new mobile application.\n    \n2. Create the mobile application.\n    \n3. Create the scan instance.\n    \n4. Provide credentials for the scan.\n    \n\nEndFragment"
+				},
+				{
+					"name": "Write your first script",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"verify status code 200\",function(){\r",
+									"    pm.response.to.have.status(200) //bdd chain\r",
+									"})\r",
+									"\r",
+									"pm.test(\"verify status code using expert\",function(){\r",
+									"pm.expect(pm.response.code).to.eqls(200) //chai assertion using expert function\r",
+									"})\r",
+									"\r",
+									"pm.test(\"Assert status message as OK\",()=>{\r",
+									"    pm.response.to.have.status(\"OK\")\r",
+									"})\r",
+									"pm.test(\"Assert OK using expert\",()=>{\r",
+									"    pm.expect(pm.response.status).to.equal(\"OK\")\r",
+									"})\r",
+									"\r",
+									"pm.test(\"Assert name is David\",()=>{\r",
+									"    var jsonResonse=pm.response.json()\r",
+									"    pm.expect(jsonResonse[1].name).to.deep.equal(\"David\")\r",
+									"})\r",
+									"\r",
+									"pm.test(\"check if jawahar is present in the response\",()=>{\r",
+									"    pm.expect(pm.response.text()).to.include(\"jawahar\")\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/employees/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"employees",
+								""
+							]
+						},
+						"description": "StartFragment\n\nThe following are provided as chainable getters to improve the readability of your assertions.\n\n**Chains**\n\n- to\n    \n- be\n    \n- been\n    \n- is\n    \n- that\n    \n- which\n    \n- and\n    \n- has\n    \n- have\n    \n- with\n    \n- at\n    \n- of\n    \n- same\n    \n- but\n    \n- does\n    \n- still\n    \n- also\n    \n\nEndFragment"
+					},
+					"response": []
+				},
+				{
+					"name": "Writing Test With Snippets",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(30);\r",
+									"});\r",
+									"console.log(pm.globals.get(\"GoogleURL\"))\r",
+									"// console.log(pm.collectionVariables.get(\"email\"))\r",
+									"// console.log(pm.environment.get(\"email\"))"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/employees/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"employees",
+								""
+							]
+						},
+						"description": "StartFragment**The interactive code snippets tool lets you easily test API requests and generate code samples specific to those requests**. For any given method, the tool shows code snippets for one or more use cases, and each use case describes a common way of calling that method. EndFragment"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tutorial-25 WorkFlows",
+			"item": [
+				{
+					"name": "Work Flow in Folder",
+					"item": [
+						{
+							"name": "Google Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"console.log(\"After Google\")",
+											"",
+											"// postman.setNextRequest(\"246921c1-3078-49ea-b012-1727f733b6fb\") ",
+											"// postman.setNextRequest(\"Yahoo Copy\") ",
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"console.log(\"Before Google\")",
+											"",
+											"postman.setNextRequest(\"Bing Copy\") ",
+											"// combination of userid *  req id"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://www.google.co.in",
+									"protocol": "https",
+									"host": [
+										"www",
+										"google",
+										"co",
+										"in"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Bing Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"console.log(\"After Bing\")",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"console.log(\"Before Bing\")"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.bing.com",
+							"protocol": "https",
+							"host": [
+								"www",
+								"bing",
+								"com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Yahoo Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"console.log(\"After Yahoo\")",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"console.log(\"Before Yahoo\")"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.yahoo.com",
+							"protocol": "https",
+							"host": [
+								"www",
+								"yahoo",
+								"com"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tutorial-26 NewmanRunCollection",
+			"item": [
+				{
+					"name": "NewmanCollectionFromJSON",
+					"item": [
+						{
+							"name": "Data Driven in JSON File Uploaad Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test('Verify the status code is 201', function () {",
+											"    pm.response.to.have.status(201);",
+											"})",
+											"",
+											"pm.test(\"Verify the response is Created\",()=> {",
+											"    pm.expect(pm.response.status).to.equal('Created');",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"First_Name\":\"{{First_Name}}\",\r\n    \"Last_Name\":\"{{Last_Name}}\",\r\n    \"EmailID\":\"{{EmailID}}\",\r\n    \"Salary\":\"{{Salary}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/employees/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"employees",
+										""
+									]
+								},
+								"description": "StartFragment\n\nData-driven testing is a testing methodology where the test case data is separated from the test case logic. You create a series of test scripts that see the same test steps performed repeatedly in the same order, but with a variation of data. In data-driven testing, a data source, like a spreadsheet or other table, is used for the input values and typically the testing environment is not hard-coded.\n\nAs an extension of your automated test cases, in data-driven testing, data external to your functional tests is loaded and used to extend these cases.\n\n  \nEndFragment"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "NewmanCollectionFromCSV",
+					"item": [
+						{
+							"name": "Send data from CSV File Upload Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test('Verify the status code is 201', function () {",
+											"    pm.response.to.have.status(201);",
+											"})",
+											"",
+											"pm.test(\"Verify the response is Created\",()=> {",
+											"    pm.expect(pm.response.status).to.equal('Created');",
+											"})",
+											"",
+											"// pm.test(\"Response time is below 30ms\",()=> {",
+											"// pm.expect(pm.response.responseTime).to.below(10) ;",
+											"// })",
+											"",
+											"// pm.test(\"Body contains Username\", ()=> {",
+											"//     pm.expect(pm.response.text()).to.include(data.Username);",
+											"//     console.log(data[\"Username\"]) //1st Old style code",
+											"// })",
+											"// pm.test(\"Body contains Role\", function () {",
+											"//     pm.expect(pm.response.text()).to.include(pm.iterationData.get(\"Role\"))// 2nd new style code",
+											"//     console.log(pm.iterationData.get(\"Role\"))",
+											"// })",
+											"// pm.test(\"Body contains age\", function () {",
+											"//     pm.expect(pm.response.text()).to.include(pm.iterationData.get(\"age\"))// 2nd new style code",
+											"//     console.log(pm.iterationData.get(\"age\"))",
+											"// })"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Username\":\"{{Username}}\",\r\n    \"Role\":\"{{Role}}\",\r\n    \"age\":\"{{age}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/employees/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"employees",
+										""
+									]
+								},
+								"description": "StartFragment\n\nData-driven testing is a testing methodology where the test case data is separated from the test case logic. You create a series of test scripts that see the same test steps performed repeatedly in the same order, but with a variation of data. In data-driven testing, a data source, like a spreadsheet or other table, is used for the input values and typically the testing environment is not hard-coded.\n\nAs an extension of your automated test cases, in data-driven testing, data external to your functional tests is loaded and used to extend these cases.\n\n**CSV** stands for Comma Separated Value. This file is simply a text only file. A CSV file can't save formatting, formulas, or anything other than text and numbers. It saves the data in a simple table format, one that can be imported into almost any program.\n\nEndFragment"
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Tutorial-27 Mocking",
+			"item": [
+				{
+					"name": "MockPostAllEmployees",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://2d5aa8be-cf3d-4f0f-910b-c0b2ba889244.mock.pstmn.io/employees",
+							"protocol": "https",
+							"host": [
+								"2d5aa8be-cf3d-4f0f-910b-c0b2ba889244",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"employees"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "MockPostAllEmployees",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://2d5aa8be-cf3d-4f0f-910b-c0b2ba889244.mock.pstmn.io/employees",
+									"protocol": "https",
+									"host": [
+										"2d5aa8be-cf3d-4f0f-910b-c0b2ba889244",
+										"mock",
+										"pstmn",
+										"io"
+									],
+									"path": [
+										"employees"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 06 Feb 2024 09:32:20 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "150"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "x-srv-trace",
+									"value": "v=1;t=a5230492c83fe0e4"
+								},
+								{
+									"key": "x-srv-span",
+									"value": "v=1;s=261fd01c3e9feab1"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "120"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "119"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1707212000"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"96-S/5iQ2y1qqIInh5BwoPc+chvDJU\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"FirstName\":\"{{$randomFirstName}}\",\n    \"LastName\":\"{{$randomLastName}}\",\n    \"EmailID\":\"{{$randomEmail}}\",\n    \"id\":\"{{$randomUUID}}\"\n}"
+						}
+					]
+				},
+				{
+					"name": "MockGetAllEmployees",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://2d5aa8be-cf3d-4f0f-910b-c0b2ba889244.mock.pstmn.io/employees",
+							"protocol": "https",
+							"host": [
+								"2d5aa8be-cf3d-4f0f-910b-c0b2ba889244",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"employees"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "MockGetAllEmployees",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://2d5aa8be-cf3d-4f0f-910b-c0b2ba889244.mock.pstmn.io/employees",
+									"protocol": "https",
+									"host": [
+										"2d5aa8be-cf3d-4f0f-910b-c0b2ba889244",
+										"mock",
+										"pstmn",
+										"io"
+									],
+									"path": [
+										"employees"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 06 Feb 2024 09:22:03 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "164"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "x-srv-trace",
+									"value": "v=1;t=6e5f47b329b2b411"
+								},
+								{
+									"key": "x-srv-span",
+									"value": "v=1;s=cb6e2b40b768a3d6"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "120"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "119"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1707211383"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a4-7hO0T/XLq3TuFViTu2ZVQQdIY+A\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"FirstName\":\"{{$randomFirstName}}\",\n        \"LastName\":\"{{$randomLastName}}\",\n        \"EmailID\":\"{{$randomEmail}}\",\n\"id\":\"{{$randomUUID}}\"\n},\n{\n \"FirstName\":\"{{$randomFirstName}}\",\n        \"LastName\":\"{{$randomLastName}}\",\n        \"EmailID\":\"{{$randomEmail}}\",\n        \"id\":\"{{$randomUUID}}\"\n\n\n},{\n \"FirstName\":\"{{$randomFirstName}}\",\n        \"LastName\":\"{{$randomLastName}}\",\n        \"EmailID\":\"{{$randomEmail}}\",\n        \"id\":\"{{$randomUUID}}\"\n\n\n}]"
+						}
+					]
+				}
+			],
+			"description": "EMS=Employee Management System\n\nAgile (Scrum)\n\nPostman enables you to create mock servers to assist with API development and testing. **A mock server simulates the behavior of a real API server by accepting requests and returning responses**. By adding a mock server to your collection and adding examples to your requests, you can simulate the behavior of a real API."
+		},
+		{
+			"name": "Tutorial-28 Flows",
+			"item": [
+				{
+					"name": "AddNewUser Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonResponse=JSON.parse(responseBody)\r",
+									"var id=jsonResponse.id //json path\r",
+									"console.log(id)\r",
+									"\r",
+									"var jsonResponse2=pm.response.json()\r",
+									"var id2=jsonResponse2.id\r",
+									"console.log(id2)\r",
+									"\r",
+									"// pm.collectionVariables.set(\"EmployeeID2\", id);\r",
+									"pm.globals.set(\"EmployeeID2\", id);\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"FirstName\": \"tommy\",\r\n    \"LastName\": \"s\",\r\n    \"EmailId\": \"tommy@gmail.com\",\r\n    \"salary\": \"10000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/employees",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAnOldUser Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/employees/{{EmployeeID2}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"employees",
+								"{{EmployeeID2}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteOldUser Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/employees/{{EmployeeID2}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"employees",
+								"{{EmployeeID2}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutOldUser Copy",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"FirstName\": \"ani\",\r\n    \"LastName\": \"k\",\r\n    \"EmailId\": \"anik@gmail.com\",\r\n    \"salary\": \"40000\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/employees/{{EmployeeID2}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"employees",
+								"{{EmployeeID2}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
